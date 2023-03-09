@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoços EPFF</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+  crossorigin="anonymous">
+</head>
+<body>
+  
+  <div class="container"> 
+    <div class="row">
+      <div class="col">
+        <h1><br>Marcação de Almoços EPFF<br/></h1>
+      </div>
+    </div>
+    <div id="novoalmoço" class="row my-2 mx-1 py-2 border rounded d-none">
+      <div class="col-12">
+        <form action="" id="formNovoAlmoço">
+          <div class="row">
+            <div class="col-12">
+              <h2>Novo Almoço</h2>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="Nomedoalunoeturma" class="form-label">Nome do aluno e turma</label>
+              <input type="text" name="Nome do aluno e turma" id="Nome do aluno e turma" class="form-control">
+            </div>
+            <div class="col-12">
+              <label for="dataAlmoço" class="form-label">Data do Almoço</label>
+              <input type="date" name="dataAlmoço" id="dataAlmoço" class="form-control">
+            </div>
+            <div class="col-12">
+              <div id="mensagemerro" class="alert alert-danger d-none" role="alert">
+                Houve um Erro!
+              </div>
+            </div>
+            <div class="col-6"><button type="button" class="btn btn-danger w-100" id="buttonCancelar">Cancelar</button></div>
+            <div class="col-6"><button type="submit" class="btn btn-primary w-100">Guardar</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>
+          Almoços
+        </h2>
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn btn-success" id="buttonNovoAlmoço">Novo Almoço</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Almoço</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaalmoços">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="almoços.js"></script>
+</body>
+</html>
